@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvjnicmkupeon"]
+
+[ext_resource type="Script" path="res://Szenen/spielbrett.gd" id="1_lued3"]
+[ext_resource type="ArrayMesh" uid="uid://f7d4atx8hxh8" path="res://Assets/Modelle/4_gewinnt_mesh.res" id="1_va0ch"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t2gq6"]
+size = Vector3(0.329, 0.26, 0.004)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sno7e"]
+size = Vector3(0.005, 0.26, 0.028)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dfkjp"]
+size = Vector3(0.328979, 0.00415039, 0.267822)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ywr0n"]
+size = Vector3(0.00609589, 0.0250244, 0.268555)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_upcjj"]
+size = Vector3(0.329834, 0.02565, 0.00628662)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fudg5"]
+size = Vector3(0.313232, 0.261948, 0.0212307)
+
+[node name="Spielbrett" type="Node3D"]
+script = ExtResource("1_lued3")
+
+[node name="Spielbrett_SB" type="StaticBody3D" parent="."]
+input_ray_pickable = false
+
+[node name="Mesh" type="MeshInstance3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.130019, 0)
+mesh = ExtResource("1_va0ch")
+
+[node name="col_vorne" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000143439, 0.129511, 0.0130035)
+shape = SubResource("BoxShape3D_t2gq6")
+
+[node name="col_hinten" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.129511, -0.0128484)
+shape = SubResource("BoxShape3D_t2gq6")
+
+[node name="col_Trennwand" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.158845, 0.130513, -5.78905e-05)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand2" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.112708, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand3" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0672221, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand4" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0222631, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand5" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0229349, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand6" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067507, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand7" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111843, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Trennwand8" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.159196, 0.130188, -0.000183105)
+shape = SubResource("BoxShape3D_sno7e")
+
+[node name="col_Boden" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 0)
+shape = SubResource("BoxShape3D_dfkjp")
+
+[node name="col_Becken_links" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.161839, 0.0122681, -0.000244141)
+shape = SubResource("BoxShape3D_ywr0n")
+
+[node name="col_Becken_rechts" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16162, 0.0122681, -0.000244141)
+shape = SubResource("BoxShape3D_ywr0n")
+
+[node name="col_Becken_vorne" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207, 0.0121841, 0.130768)
+shape = SubResource("BoxShape3D_upcjj")
+
+[node name="col_Becken_vorne2" type="CollisionShape3D" parent="Spielbrett_SB"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012207, 0.0121841, -0.131377)
+shape = SubResource("BoxShape3D_upcjj")
+
+[node name="Area_Spielstand" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13861, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area_Spielstand"]
+shape = SubResource("BoxShape3D_fudg5")

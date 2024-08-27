@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://6vcb85iktxda"]
+
+[ext_resource type="PackedScene" uid="uid://c6k3ns4dddjvq" path="res://Szenen/Spieler.tscn" id="2_fbldr"]
+[ext_resource type="PackedScene" uid="uid://c6bykkqrmsmrd" path="res://Szenen/umgebung.tscn" id="3_j3bti"]
+[ext_resource type="PackedScene" uid="uid://u4adl0i85ye4" path="res://Szenen/spielstein.tscn" id="3_rj5j6"]
+[ext_resource type="PackedScene" uid="uid://cvjnicmkupeon" path="res://Szenen/Spielbrett.tscn" id="4_ci4or"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_110gg"]
+
+[sub_resource type="Sky" id="Sky_bkvk8"]
+sky_material = SubResource("PhysicalSkyMaterial_110gg")
+
+[sub_resource type="Environment" id="Environment_3qxwc"]
+background_mode = 2
+sky = SubResource("Sky_bkvk8")
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="Sonne" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.52089, 0.853624, 0, -0.853624, 0.52089, 2.2927, 2.59373, -3.13066)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3qxwc")
+
+[node name="Spieler" parent="." instance=ExtResource("2_fbldr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.60074, 1.10631, -4.58298)
+
+[node name="Umgebung" parent="." instance=ExtResource("3_j3bti")]
+
+[node name="Spielbrett" parent="." instance=ExtResource("4_ci4or")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15968, 1.00239, -4.60278)
+
+[node name="Spielstein" parent="Spielbrett" instance=ExtResource("3_rj5j6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24042, 0.03587, -0.02)
+
+[node name="Spielstein2" parent="Spielbrett" instance=ExtResource("3_rj5j6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24042, 0.03587, 0.03016)
+
+[node name="Spielstein3" parent="Spielbrett" instance=ExtResource("3_rj5j6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24042, 0.03587, 0.0743799)
+spieler = 2

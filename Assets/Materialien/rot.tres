@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0q2a2xujl0lo"]
+
+[resource]
+albedo_color = Color(1, 0, 0, 1)
+clearcoat_enabled = true
+clearcoat_roughness = 1.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.37
+subsurf_scatter_transmittance_enabled = true
+subsurf_scatter_transmittance_color = Color(1, 0.443684, 0.375095, 1)
+refraction_enabled = true

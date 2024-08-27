@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6k3ns4dddjvq"]
+
+[ext_resource type="Script" path="res://Skripte/Spieler.gd" id="1_2g7st"]
+[ext_resource type="PackedScene" uid="uid://ctq18k6oxotvp" path="res://Komponenten/Komponenten.tscn" id="2_dllh3"]
+[ext_resource type="PackedScene" uid="uid://b2qn2rf3b6xqq" path="res://Komponenten/Greifen/greifen.tscn" id="2_gppw1"]
+[ext_resource type="PackedScene" uid="uid://q2ukhwutdvkd" path="res://Komponenten/Bewegung/laufen.tscn" id="3_ywp66"]
+[ext_resource type="PackedScene" uid="uid://nx7q03om4jev" path="res://Komponenten/fadenkreuz.tscn" id="6_k5uqt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrliu"]
+radius = 0.03
+height = 0.2
+
+[node name="Spieler" type="CharacterBody3D" node_paths=PackedStringArray("camera")]
+script = ExtResource("1_2g7st")
+camera = NodePath("Kamera")
+
+[node name="Spieler_Col" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_xrliu")
+
+[node name="Kamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0819228, 0)
+current = true
+near = 0.01
+far = 10.0
+
+[node name="Komponenten" parent="." node_paths=PackedStringArray("actor") instance=ExtResource("2_dllh3")]
+actor = NodePath("..")
+
+[node name="Laufen" parent="Komponenten" instance=ExtResource("3_ywp66")]
+
+[node name="Greifen" parent="Komponenten" node_paths=PackedStringArray("kamera") instance=ExtResource("2_gppw1")]
+kamera = NodePath("../../Kamera")
+
+[node name="Fadenkreuz" parent="Komponenten" instance=ExtResource("6_k5uqt")]
