@@ -2,6 +2,9 @@
 ## Projekt herunterladen
 ### Option 1: Als Zip herunterladen (empfohlen)
 ![](https://sites.northwestern.edu/researchcomputing/files/2021/05/github.png)
+
+_Screenshot von https://sites.northwestern.edu/researchcomputing/resources/downloading-from-github/_
+
 1. Das Projekt als komprimierte Datei herunterladen (Screenshot)
 2. Projekt entpacken
 
