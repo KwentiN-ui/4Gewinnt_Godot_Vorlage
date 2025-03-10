@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6k3ns4dddjvq"]
 
-[ext_resource type="Script" path="res://Skripte/Spieler.gd" id="1_2g7st"]
+[ext_resource type="Script" uid="uid://dygsc5sht5bn6" path="res://Skripte/Spieler.gd" id="1_2g7st"]
 [ext_resource type="PackedScene" uid="uid://ctq18k6oxotvp" path="res://Komponenten/Komponenten.tscn" id="2_dllh3"]
 [ext_resource type="PackedScene" uid="uid://b2qn2rf3b6xqq" path="res://Komponenten/Greifen/greifen.tscn" id="2_gppw1"]
 [ext_resource type="PackedScene" uid="uid://q2ukhwutdvkd" path="res://Komponenten/Bewegung/laufen.tscn" id="3_ywp66"]

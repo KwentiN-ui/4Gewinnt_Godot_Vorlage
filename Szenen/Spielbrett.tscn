@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cvjnicmkupeon"]
 
-[ext_resource type="Script" path="res://Szenen/spielbrett.gd" id="1_lued3"]
+[ext_resource type="Script" uid="uid://ds44fboyjug3s" path="res://Szenen/spielbrett.gd" id="1_lued3"]
 [ext_resource type="ArrayMesh" uid="uid://f7d4atx8hxh8" path="res://Assets/Modelle/4_gewinnt_mesh.res" id="1_va0ch"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t2gq6"]

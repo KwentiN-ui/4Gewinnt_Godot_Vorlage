@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://u4adl0i85ye4"]
 
-[ext_resource type="Script" path="res://Skripte/spielstein.gd" id="1_m8wem"]
-[ext_resource type="Script" path="res://Komponenten/komponenten.gd" id="2_iyqf3"]
+[ext_resource type="Script" uid="uid://l5l6lob2ojyr" path="res://Skripte/spielstein.gd" id="1_m8wem"]
+[ext_resource type="Script" uid="uid://bdfnf26x20fl" path="res://Komponenten/komponenten.gd" id="2_iyqf3"]
 [ext_resource type="PackedScene" uid="uid://bache2dp1dmc" path="res://Komponenten/Greifen/greifbar.tscn" id="2_urst7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xhb0"]

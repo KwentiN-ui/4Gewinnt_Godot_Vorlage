@@ -15,7 +15,6 @@ background_mode = 2
 sky = SubResource("Sky_bkvk8")
 
 [node name="Main" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
 
 [node name="Sonne" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.52089, 0.853624, 0, -0.853624, 0.52089, 2.2927, 2.59373, -3.13066)
